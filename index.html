@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Cable Premium Perú</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0056b3 0%, #00b4d8 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #222;
+        }
+        .corporate-header {
+            width: 100vw;
+            min-height: 260px;
+            background: url('/pagos/img/logo_header.png') center center/cover no-repeat;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 24px #0002;
+            overflow: hidden;
+        }
+        .corporate-header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(30,34,45,0.55) 0%, rgba(0,0,0,0.28) 100%);
+            z-index: 1;
+        }
+        .corporate-header-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            padding: 48px 18px 38px 18px;
+        }
+        .corporate-header h1 {
+            color: #fff;
+            font-size: 3.2em;
+            margin: 0 0 16px 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 16px #000a;
+        }
+        .corporate-header p {
+            color: #f1f1f1;
+            font-size: 1.25em;
+            margin: 0 auto 10px auto;
+            max-width: 600px;
+            text-shadow: 0 2px 8px #0008;
+        }
+        .corporate-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            padding: 30px 10px 40px 10px;
+        }
+        .corporate-main h2 {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 12px #000a, 0 1px 0 #0056b3;
+            background: rgba(0, 86, 179, 0.68);
+            padding: 10px 24px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .corporate-main ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px 0;
+        }
+        .corporate-main ul li {
+            font-size: 1.08em;
+            margin-bottom: 10px;
+            color: #000000;
+            padding-left: 1.2em;
+            position: relative;
+        }
+        .corporate-main ul li::before {
+            content: '✔';
+            color: #00b4d8;
+            position: absolute;
+            left: 0;
+        }
+        .corporate-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #0056b3 0%, #00b4d8 100%);
+            color: #fff;
+            font-size: 1.18em;
+            font-weight: bold;
+            padding: 16px 38px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px #0002;
+            margin-top: 18px;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .corporate-btn:hover {
+            background: linear-gradient(90deg, #00b4d8 0%, #0056b3 100%);
+            box-shadow: 0 4px 18px #0003;
+        }
+        .corporate-values {
+            background: rgba(255,255,255,0.92);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #0001;
+            max-width: 700px;
+            margin: 30px auto 0 auto;
+            padding: 24px 18px 18px 18px;
+            text-align: center;
+        }
+        .corporate-values h3 {
+            color: #0056b3;
+            margin-bottom: 12px;
+        }
+        .corporate-values ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+        .corporate-values li {
+            background: #e9f5fb;
+            border-radius: 8px;
+            padding: 10px 18px;
+            color: #0056b3;
+            font-weight: 500;
+            font-size: 1em;
+            min-width: 120px;
+        }
+        .corporate-contact {
+            background: rgba(255,255,255,0.92);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #0001;
+            max-width: 700px;
+            margin: 30px auto 0 auto;
+            padding: 24px 18px 18px 18px;
+            text-align: center;
+        }
+        .corporate-contact h3 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .corporate-contact p {
+            margin: 0 0 8px 0;
+            color: #222;
+        }
+        .corporate-contact a {
+            color: #00b4d8;
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .corporate-header h1 { font-size: 1.3em; }
+            .corporate-header p { font-size: 1em; }
+            .corporate-header-content { padding: 32px 4vw 24px 4vw; }
+            .corporate-main h2 { font-size: 1.1em; }
+            .corporate-btn { font-size: 1em; padding: 12px 18px; }
+            .corporate-values ul { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="corporate-header">
+        <div class="corporate-header-content">
+            <h1>Cable Premium Perú</h1>
+            <p>Bienvenido a la red de fibra óptica líder en la región. En <b>Cable Premium Perú</b> conectamos hogares y empresas con la mejor tecnología, brindando velocidad, estabilidad y un servicio humano que nos diferencia.<br>
+            <b>¡Conéctate al futuro con nosotros!</b></p>
+        </div>
+    </div>
+    <div class="corporate-main">
+        <h2>Soluciones de Internet de Alta Velocidad</h2>
+        <ul>
+            <li>Fibra óptica directa a tu hogar o negocio.</li>
+            <li>Planes flexibles y adaptados a tus necesidades.</li>
+            <li>Soporte técnico local y atención personalizada.</li>
+            <li>Instalación profesional y rápida.</li>
+            <li>Gestión en línea, fácil y seguro.</li>
+        </ul>
+        <a class="corporate-btn" href="/pagos/login.php">Ir a la plataforma de pagos</a>
+    </div>
+    <div class="corporate-values">
+        <h3>Nuestros Valores</h3>
+        <ul>
+            <li>Innovación</li>
+            <li>Compromiso</li>
+            <li>Transparencia</li>
+            <li>Calidad</li>
+            <li>Cercanía</li>
+            <li>Soporte 24/7</li>
+        </ul>
+    </div>
+    <div class="corporate-contact">
+        <h3>Contáctanos</h3>
+        <p>¿Tienes dudas o necesitas asesoría? Nuestro equipo está listo para ayudarte.</p>
+        <!-- <p><b>Teléfono:</b> <a href="tel:+51999999999">+51 999 999 999</a></p> -->
+        <p><b>Email:</b> <a href="mailto:info@cablepremiumperu.com">info@cablepremiumperu.com</a></p>
+        <!-- <p><b>Dirección:</b> Av. Principal 123, Ciudad, Perú</p> -->
+    </div>
+    <footer style="text-align:center;color:#fff;font-size:1em;padding:24px 10px 10px 10px;opacity:0.85;">
+        &copy; 2025 Cable Premium Perú. Todos los derechos reservados.
+    </footer>
+</body>
+</html> 
